@@ -9,7 +9,10 @@ class IsisaldoDetail extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'Isi Saldo',
-          style: TextStyle(fontWeight: FontWeight.w600),
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 24,
+          ),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -20,27 +23,30 @@ class IsisaldoDetail extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xFF90CAF9), Color(0xFF42A5F5)],
+            colors: [Color(0xFF2196F3), Color(0xFF1976D2)],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 80.0),
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
                 decoration: InputDecoration(
                   hintText: 'Jumlah Saldo',
-                  hintStyle: TextStyle(color: Colors.white.withOpacity(0.8)),
+                  hintStyle: TextStyle(
+                    color: Colors.white.withOpacity(0.8),
+                    fontSize: 18,
+                  ),
                   filled: true,
                   fillColor: Colors.white.withOpacity(0.1),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                     borderSide: BorderSide.none,
                   ),
-                  prefixIcon: const Icon(Icons.account_balance_wallet, color: Colors.white70),
+                  prefixIcon: const Icon(Icons.wallet, color: Colors.white70),
                 ),
                 keyboardType: TextInputType.number,
                 style: const TextStyle(color: Colors.white, fontSize: 18),
@@ -55,15 +61,19 @@ class IsisaldoDetail extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   foregroundColor: Colors.blueAccent,
-                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 50),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(25),
+                    borderRadius: BorderRadius.circular(30),
                   ),
-                  elevation: 2,
+                  elevation: 5,
+                  shadowColor: Colors.black.withOpacity(0.1),
                 ),
                 child: const Text(
                   'Isi Saldo',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
             ],

@@ -10,8 +10,8 @@ class AktivitasPage extends StatelessWidget {
         title: const Text(
           'Aktivitas',
           style: TextStyle(
-            fontWeight: FontWeight.w700,
-            fontSize: 24,
+            fontWeight: FontWeight.w800,
+            fontSize: 26,
             color: Colors.white,
           ),
         ),
@@ -22,34 +22,34 @@ class AktivitasPage extends StatelessWidget {
       ),
       extendBodyBehindAppBar: true,
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xFF009688), Color(0xFF00796B)],
+            colors: [Color(0xFF1E3C72), Color(0xFF2A5298)],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
         ),
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 32),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.15),
-                    borderRadius: BorderRadius.circular(16),
+                    color: Colors.white.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
+                        color: Colors.black.withOpacity(0.3),
                         blurRadius: 25,
-                        offset: const Offset(0, 10),
+                        offset: const Offset(0, 15),
                       ),
                     ],
                   ),
                   child: const Icon(
                     Icons.history_rounded,
-                    size: 90,
+                    size: 100,
                     color: Colors.white,
                   ),
                 ),
@@ -57,8 +57,8 @@ class AktivitasPage extends StatelessWidget {
                 const Text(
                   'Riwayat Aktivitas',
                   style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.w700,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w800,
                     color: Colors.white,
                   ),
                   textAlign: TextAlign.center,
@@ -67,12 +67,12 @@ class AktivitasPage extends StatelessWidget {
                 const Text(
                   'Temukan semua aktivitas Anda di sini.',
                   style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.white70,
+                    fontSize: 18,
+                    color: Colors.white60,
                   ),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 50),
+                const SizedBox(height: 60),
                 ElevatedButton(
                   onPressed: () {
                     ScaffoldMessenger.of(context).showSnackBar(
@@ -81,15 +81,15 @@ class AktivitasPage extends StatelessWidget {
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
-                    foregroundColor: Colors.teal,
-                    padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 50),
+                    foregroundColor: Colors.blueAccent,
+                    padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 60),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
+                      borderRadius: BorderRadius.circular(35),
                     ),
-                    elevation: 5,
+                    elevation: 8,
                     shadowColor: Colors.black.withOpacity(0.3),
                     textStyle: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 18,
                       fontWeight: FontWeight.w600,
                     ),
                   ),

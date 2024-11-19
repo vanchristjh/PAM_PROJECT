@@ -5,6 +5,8 @@ class ProfilDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -28,22 +30,25 @@ class ProfilDetail extends StatelessWidget {
       ),
       extendBodyBehindAppBar: true,
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Color(0xFF1E3C72), Color(0xFF2A5298)],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 80.0),
+        width: size.width,
+        height: size.height,
+        padding: const EdgeInsets.symmetric(horizontal: 32.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ClipOval(
               child: Image.asset(
                 'assets/logo.jpg',
-                height: 120,
-                width: 110,
+                height: size.width * 0.3, // Ukuran responsif
+                width: size.width * 0.3,
                 fit: BoxFit.cover,
               ),
             ),
@@ -51,18 +56,20 @@ class ProfilDetail extends StatelessWidget {
             const Text(
               'Nama Pengguna',
               style: TextStyle(
-                fontSize: 32,
+                fontSize: 28,
                 fontWeight: FontWeight.w900,
                 color: Colors.white,
               ),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
             const Text(
               'email@example.com',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 color: Colors.white70,
               ),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 40),
             ElevatedButton(
@@ -70,14 +77,17 @@ class ProfilDetail extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.green,
-                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 16),
+                padding: EdgeInsets.symmetric(
+                  horizontal: size.width * 0.2, // Responsif
+                  vertical: 16,
+                ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(40),
                 ),
                 elevation: 10,
                 shadowColor: Colors.black.withOpacity(0.3),
                 textStyle: const TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -91,14 +101,17 @@ class ProfilDetail extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.redAccent,
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 16),
+                padding: EdgeInsets.symmetric(
+                  horizontal: size.width * 0.2, // Responsif
+                  vertical: 16,
+                ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(40),
                 ),
                 elevation: 10,
                 shadowColor: Colors.black.withOpacity(0.3),
                 textStyle: const TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   fontWeight: FontWeight.w700,
                 ),
               ),

@@ -10,11 +10,12 @@ class PindaiDetail extends StatelessWidget {
         title: const Text('Pindai QR Code'),
         backgroundColor: Colors.blueAccent,
         centerTitle: true,
+        elevation: 0,  // Removed shadow for a cleaner look
       ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.blueAccent, Colors.lightBlueAccent],
+            colors: [Colors.blue.shade700, Colors.blue.shade400],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -29,9 +30,9 @@ class PindaiDetail extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      blurRadius: 10,
-                      offset: const Offset(0, 4),
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 15,
+                      offset: const Offset(0, 5),
                     ),
                   ],
                 ),
@@ -39,17 +40,17 @@ class PindaiDetail extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   child: Icon(
                     Icons.qr_code_scanner,
-                    size: 120,
-                    color: Colors.blueAccent,
+                    size: 130,
+                    color: Colors.blue.shade700,
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 30),
               const Text(
                 'Arahkan kamera ke QR Code',
                 style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
                   color: Colors.white,
                 ),
               ),
@@ -75,19 +76,17 @@ class PindaiDetail extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white, // Updated parameter
                   foregroundColor: Colors.blueAccent, // Updated parameter
-                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
                   elevation: 5,
-                ),
-                child: const Text(
-                  'Mulai Pemindaian',
-                  style: TextStyle(
+                  textStyle: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+                child: const Text('Mulai Pemindaian'),
               ),
             ],
           ),
